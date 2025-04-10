@@ -30,7 +30,7 @@
                         >Edit</a>
                     </div>
                     <div class="min-w-fit min-h-fit my-3">
-                        <form action="{{ route('posts.destroy', $post->id) }}" method="post">
+                        <form action="{{ route('posts.destroy', $post->id) }}" method="post" >
                             @csrf
                             @method('delete')
                             
@@ -48,8 +48,9 @@
                         </div>
                     @endforeach
 
-                    <form action="{{ route('comments.store', $post->id) }}" method="post">
+                    <form action="{{ route('comments.store', $post->id) }}" method="post"  >
                         @csrf
+                        
                         <div>
                             <textarea
                                 name="content" id="content" rows="4" required
