@@ -41,7 +41,7 @@
                     </div>
 
                     <h2>Comments:</h2>
-                    @foreach ($comments as $comment)
+                    @foreach ($post->comments as $comment)
                         <div>
                             <h3>by {{ $comment->user->name }}</h3>
                             <p>{{ $comment->content }}</p>

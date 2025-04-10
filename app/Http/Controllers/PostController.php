@@ -85,7 +85,8 @@ class PostController extends Controller
     public function show(Post $post)
     {
         Gate::authorize('view', $post);
-        return view('post.show', ['posts' => $post]);
+        $statuses = PostStatus::all();
+        return view('post.show', ['post' => $post, 'statuses' => $statuses]);
     }
 
     /**
