@@ -31,8 +31,8 @@
                             </div>
 
                             <div>
-                                <label for="status">Status</label>
-                                <select name="status" id="status">
+                                <label for="status_id">Status</label>
+                                <select name="status_id" id="status">
                                     @foreach ($statuses as $status)
                                         <option value="{{ $status->id }}">{{ $status->name }}</option>
                                     @endforeach
